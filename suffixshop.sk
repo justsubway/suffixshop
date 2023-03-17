@@ -1,0 +1,56 @@
+function tagshop(pl: player):
+    create a gui with virtual chest inventory with 5 rows named "&5Tags":
+        make gui slot (integers between 0 and 44) to gray stained glass pane named "&7"
+        make gui slot 0,2,4,6,8,18,26,36,38,40,42 and 44 to magenta stained glass pane named "&7"
+        make gui slot 1,3,5,7,9,17,27,35,37,39,41 and 43 to purple stained glass pane named "&7"
+        make gui slot 0 to magenta stained glass pane named "&8By &3Kxpr&8, For &3Zenix."
+        make gui slot 11 to name tag named "&x&f&b&0&0&0&0H&x&f&c&1&d&0&ce&x&f&c&3&9&1&7l&x&f&d&5&6&2&3l&x&f&d&7&3&2&ff&x&f&e&9&0&3&bi&x&f&e&a&c&4&6r&x&f&f&c&9&5&2e" with lore "&6Cost: &a6000":
+            {_pl}'s balance is less than 6000:
+                send "&cYou Do &n&lnot&r&c have enough."
+            {_pl}'s balance is greater than 6000:
+                execute console command "lp user %{_pl}% parent add hellfire"
+                remove 6000 from {_pl}'s balance
+                send ""
+                send "&7You now have &a&n%{_pl}'s balance%"
+                send ""
+        make gui slot 21 to name tag named "&x&4&c&7&b&c&bI&x&4&d&9&6&d&ac&x&4&e&b&1&e&9e&x&4&f&c&c&f&8b&x&6&8&d&f&f&fl&x&9&a&e&a&f&fa&x&c&d&f&4&f&fs&x&f&f&f&f&f&ft" with lore "&6Cost: &a6000":
+            {_pl}'s balance is less than 6000:
+                send "&cYou Do &n&lnot&r&c have enough."
+            {_pl}'s balance is greater than 6000:
+                execute console command "lp user %{_pl}% parent add iceblast"
+                remove 6000 from {_pl}'s balance
+                send ""
+                send "&7You now have &a&n%{_pl}'s balance%"
+                send ""
+        make gui slot 31 to name tag named "&x&7&2&3&9&f&fS&x&8&6&3&6&d&fu&x&9&a&3&2&c&0r&x&a&e&2&f&a&0v&x&c&3&2&b&8&0i&x&d&7&2&8&6&0v&x&e&b&2&4&4&1o&x&f&f&2&1&2&1r" with lore "&6Cost: &a6000":
+            {_pl}'s balance is less than 6000:
+                send "&cYou Do &n&lnot&r&c have enough."
+            {_pl}'s balance is greater than 6000:
+                execute console command "lp user %{_pl}% parent add survivor"
+                remove 6000 from {_pl}'s balance
+                send ""
+                send "&7You now have &a&n%{_pl}'s balance%"
+                send ""
+        make gui slot 23 to name tag named "&x&6&7&f&f&f&1S&x&7&a&e&5&d&9w&x&8&d&c&b&c&1o&x&a&0&b&1&a&9r&x&b&3&9&8&9&1d&x&c&6&7&e&7&8s&x&d&9&6&4&6&0m&x&e&c&4&a&4&8a&x&f&f&3&0&3&0n" with lore "&6Cost: &a6000":
+            {_pl}'s balance is less than 6000:
+                send "&cYou Do &n&lnot&r&c have enough."
+            {_pl}'s balance is greater than 6000:
+                execute console command "lp user %{_pl}% parent add swordsman"
+                remove 6000 from {_pl}'s balance
+                send ""
+                send "&7You now have &a&n%{_pl}'s balance%"
+                send ""
+        make gui slot 15 to name tag named "&x&5&2&2&6&6&aN&x&5&8&3&c&7&di&x&5&e&5&2&8&fg&x&6&3&6&8&a&2h&x&6&9&7&e&b&5t&x&6&f&9&3&c&7f&x&7&5&a&9&d&aa&x&7&a&b&f&e&cl&x&8&0&d&5&f&fl" with lore "&6Cost: &a6000":
+            {_pl}'s balance is less than 6000:
+                send "&cYou Do &n&lnot&r&c have enough."
+            {_pl}'s balance is greater than 6000:
+                execute console command "lp user %{_pl}% parent add nightfall"
+                remove 6000 from {_pl}'s balance
+                send ""
+                send "&7You now have &a&n%{_pl}'s balance%"
+                send ""
+        open last gui to {_pl}
+
+command tags:
+    trigger:
+        tagshop(player)
